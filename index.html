@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Cookie Game</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+<nav><button type="button" onclick="restartGame()">reset</button><button type="button" href="#" onclick="saveGame()">save</button></nav>
+
+<div id="counter">
+	<img src="images/currency.png">
+  <div id="counterCookies">0 <br>cookies</div>
+  <div id="counterPerSecond" style="font-size:60%; background:pink;margin:10px">per second: </div>
+</div>
+
+<div id="cookie"></div>
+
+<div id="producersBox">
+  <div class="producers cursor">cursors</div>
+  <div class="priceTag cursor"></div>
+  <div class="producers grandma">grandmas</div>
+  <div class="priceTag grandma"></div>
+  <div class="producers farm">farma</div>
+  <div class="priceTag farm"></div>
+  <div class="producers mine">mine</div>
+  <div class="priceTag mine"></div>
+  <div class="producers factory">factory</div>
+  <div class="priceTag factory"></div>
+</div>
+
+  <script src="game.js"></script>
+</body>
+</html>

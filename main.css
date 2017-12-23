@@ -1,0 +1,46 @@
+#counter {
+  width:240px;
+  height:125px;
+  padding:10px;
+  background:gray;
+  margin:20px auto;
+  color:white;
+  font-size:1.8em;
+  text-align:center;
+  border-radius:10px;
+}
+
+#cookie {
+  width:250px;
+  height:250px;
+  background:chocolate;
+  border:1px solid black;
+  border-radius:50%;
+  box-shadow:0 0 20px chocolate;
+  margin:50px auto;
+}
+
+#producersBox {
+  position:absolute;
+  right:20px;
+  top:20px;
+  background: gray;
+  width:200px;
+  padding:10px;
+}
+.producers {
+  border:1px solid white;
+  color:white;
+  height:50px;
+  padding:5px;
+/*   margin-bottom:5px; */
+  padding-left:20px;
+  text-align:left;
+  font-size:1.5em;
+}
+.priceTag {
+  position:relative;
+  top: -30px;
+  left: 20px;
+  color:white;
+}
