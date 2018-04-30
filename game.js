@@ -18,7 +18,7 @@ var totalPerSecond = function() {
   for(var i=0; i<producersListLength; i++) {
      perSecond += producersList[i].howMuchCookies * producersList[i].number * producersList[i].howOften;
   }
-  counterPerSecond.innerHTML = "per second: " + perSecond;
+  counterPerSecond.innerHTML = "per second: " + perSecond.toFixed(1);
 }
 
 var bigCookie = {
@@ -67,7 +67,7 @@ function producersClick(e) {
 
 var utility = {
   howOften: 1,
-  perSecond: this.howMuchCookies * this.number,
+  perSecond: (this.howMuchCookies * this.number).toFixed(1),
   buy: function() {if(totalCookies>=this.price){totalCookies-=this.price; this.price+=Math.round((15/100)*this.price); this.number+=1; this.display(); counter.update();totalPerSecond();}},
   produce: function() {totalCookies += (this.howMuchCookies * this.howOften * this.number)/10;}, //============================
   display: function() {
@@ -83,6 +83,9 @@ cursor.howMuchCookies = 1;
 cursor.howOften = 0.1;
 cursor.price = 15;
 cursor.number = 0;
+cursor.display = function() {
+    document.getElementsByClassName(this.id)[1].innerHTML = "price: " + this.price + ", " + " cps: " + (this.howMuchCookies * this.number * this.howOften).toFixed(1);
+}
 
 var grandma = Object.create(utility);
 grandma.id = "grandma";
